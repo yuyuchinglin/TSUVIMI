@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TSIVIMI Album</title>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		list-style:none;
+
+	}
+
+
+
+
+
+
+/*fixed black menu*/
+
+
+	@media (min-width: 768px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 60px;
+		position:relative;
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		height: 60px;
+
+
+		
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	}
+
+	@media (max-width: 767px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 90px;
+		position:relative;
+
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		
+		width: 100%;
+		height: 60px;
+		text-align:center;
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+		margin-top: 39px;
+		
+	}
+
+	.logo {
+		text-align:center;
+	}
+
+	}
+
+	.menublack a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+	.active {
+		color:#ffb0b0;
+	}
+
+
+
+/*JQ menu*/
+
+	.nav {
+		width: 100%;
+		height:60px;
+		background-color: rgba(50, 50, 50, 0.5);
+		position:relative;
+		position:fixed;
+		top:0px;
+		background-color:rgba(60,60,60,1.0);
+		color: #FFFFFF;
+		z-index:9999;
+
+	}
+
+	
+	@media (min-width:768px) {
+	.menu {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		
+	}
+	}
+
+	.nav .menu  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	@media (max-width:767px) {
+		.nav {height: 90px;}
+		.menu {
+			position:absolute;
+			bottom:0;
+			right:0;
+			width: 100%;
+			text-align:center;
+		}
+		.logo {
+			text-align:center;
+		}
+	}
+
+	.menu a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+
+/*album*/
+	.albumall {
+		width: 100%;
+		height:auto;
+		background-color: #222;
+	}
+	
+	.album{
+			width: 100vw;
+		
+	}
+
+	.album img {
+		height: 20%;
+		width: 20%;
+		float:left;
+	}
+
+	.clear {
+		clear:both;
+	}
+
+	img:hover {
+		-webkit-filter:saturate(0.3);
+	}
+
+
+
+
+
+
+/*footer*/
+
+	.footer {
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		padding: 15px 30px;
+		color:#ddd;
+		text-align:center;
+		box-sizing:border-box;
+		position:relative;
+	}
+
+	.footer a {
+		text-decoration:none;
+		color:#ddd;
+		margin-right: 15px;
+		line-height: 30px;
+		box-sizing:border-box;
+	}
+
+	.footer>p:first-child>a:first-child {
+		color:#dd0;
+	}
+
+	.footer>p:first-child>a:nth-child(2) {
+		color:#f6cada;
+	}
+	
+	.footer>p:first-child>a:hover {
+		color:#be0d0d;
+	}
+
+
+	.footer>p>a:hover {
+		color:#f69274;
+	}
+	
+	.iconall {
+		position:absolute;
+		right:25px;
+		bottom:3px;
+
+		height: 50px;
+		bottom:15px;
+
+	
+		
+
+	}
+
+	.icon {
+		display:inline-block;
+	
+		
+
+	}
+
+
+	@media (max-width: 767px) {
+		.iconall {display:none;}
+		.footer {font-size: 15px;}
+		.footer a {line-height: 20px;}
+	}
+
+
+	.icon:hover {
+		animation:icon 1s  infinite ;
+	}
+
+	@keyframes icon{
+		0% {transform: scale(1,1); top:0;}
+		40% {transform: scale(0.7,1); top:0;}
+		80% {transform: scale(1,0.8); top:0;}
+		100% {transform: scale(1,1); top:0;}
+	}
+</style>
+
+</head>
+
+
+<body>
+	<div class="navblack">
+		<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+		<div class="menublack">
+				<a href="../home/index.html" class="current">Home</a>
+				<a href="../About/about.html">About</a>
+				<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+				<a href="album.html">Album</a>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="nav" id="menu">
+			<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+			<div class="menu">
+					<a href="../home/index.html" class="current">Home</a>
+					<a href="../About/about.html">About</a>
+					<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+					<a href="album.html">Album</a>
+			</div>
+
+		</div>
+
+
+	<div class="albumall">
+		<ul class="album">
+			<li class="pic"><a href="portraitpic/1_ChihHanYang1.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x Chih Han Yang"><img src="portraitpic2/1_ChihHanYang1.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/1_ChihHanYang2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x Chih Han Yang"><img src="portraitpic2/1_ChihHanYang2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/1_Debbie.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x Debbie"><img src="portraitpic2/1_Debbie.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="1_Sasha.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x Sasha"><img src="portraitpic2/1_Sasha.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/1_Ting.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x Ting"><img src="portraitpic2/1_Ting.jpg" alt=""></a></li>
+			<li class="pic"><a href="1_季璇.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x 季璇"><img src="portraitpic2/1_季璇.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/1_楊菲奈Fina.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #01 x 楊菲奈Fina"><img src="portraitpic2/1_楊菲奈Fina.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/2_ChengYun.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #02 x ChengYun"><img src="portraitpic2/2_ChengYun.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/2_Jessie.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #02 x Jessie"><img src="portraitpic2/2_Jessie.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/2_Yvonne.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #02 x Yvonne"><img src="portraitpic2/2_Yvonne.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_Ashley.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x Ashley"><img src="portraitpic2/3_Ashley.jpg" height="959" width="959" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/3_Aveil.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x Aveil"><img src="portraitpic2/3_Aveil.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_Aveil2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x Aveil"><img src="portraitpic2/3_Aveil2.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/3_Jean.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x Jean"><img src="portraitpic2/3_Jean.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_JIA零加.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x JIA零加"><img src="portraitpic2/3_JIA零加.jpg" alt=""></a></li>
+
+
+			<li class="pic"><a href="portraitpic/3_Wendy.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x Wendy"><img src="portraitpic2/3_Wendy.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_劉裳霓.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 劉裳霓"><img src="portraitpic2/3_劉裳霓.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_奇萱.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 奇萱"><img src="portraitpic2/3_奇萱.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_李優URIKO.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 李優 URIKO"><img src="portraitpic2/3_李優URIKO.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_徐韻淇.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 徐韻淇"><img src="portraitpic2/3_徐韻淇.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_翁嘉薇.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 翁嘉薇"><img src="portraitpic2/3_翁嘉薇.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_陳嘎嘎.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 陳嘎嘎"><img src="portraitpic2/3_陳嘎嘎.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_LinJia.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x LinJia"><img src="portraitpic2/3_LinJia.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_林幸潔LilliLin.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 林幸潔 Lilli Lin"><img src="portraitpic2/3_林幸潔LilliLin.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_林幸潔LilliLin2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 林幸潔 Lilli Lin"><img src="portraitpic2/3_林幸潔LilliLin2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/3_林幸潔LilliLin3.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #03 x 林幸潔 Lilli Lin"><img src="portraitpic2/3_林幸潔LilliLin3.jpg" alt=""></a></li>
+
+
+
+			<li class="pic"><a href="portraitpic/4_Koren.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #04 x Koren"><img src="portraitpic2/4_Koren.jpg"  alt=""></a></li>
+			<li class="pic"><a href="portraitpic/4_Koren2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #04 x Koren"><img src="portraitpic2/4_Koren2.jpg"  alt=""></a></li>
+			<li class="pic"><a href="portraitpic/4_Sonia.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #04 x Sonia"><img src="portraitpic2/4_Sonia.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/4_馬迪.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #04 x 馬迪"><img src="portraitpic2/4_馬迪.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/4_PhoebeLin林子君.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #04 x Phoebe Lin 林子君"><img src="portraitpic2/4_PhoebeLin林子君.jpg" alt=""></a></li>
+
+
+
+			<li class="pic"><a href="portraitpic/5_Angela.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x Angela"><img src="portraitpic2/5_Angela.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/5_Angela2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x Angela"><img src="portraitpic2/5_Angela2.jpg" alt=""></a></li>
+
+			<li class="pic"><a href="portraitpic/5_Tracy.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x Tracy"><img src="portraitpic2/5_Tracy.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/5_奇萱.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x 奇萱"><img src="portraitpic2/5_奇萱.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/5_安安.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x 安安"><img src="portraitpic2/5_安安.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/5_安安2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x 安安"><img src="portraitpic2/5_安安2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/5_黃懷緣ArielleHuang.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #05 x 黃懷緣 Arielle Huang"><img src="portraitpic2/5_黃懷緣ArielleHuang.jpg" alt=""></a></li>
+
+
+			<li class="pic"><a href="portraitpic/6_Debbie.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Debbie"><img src="portraitpic2/6_Debbie.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Erika.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Erika"><img src="portraitpic2/6_Erika.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Jean.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Jean"><img src="portraitpic2/6_Jean.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Miars.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Miars"><img src="portraitpic2/6_Miars.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Molly.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Molly"><img src="portraitpic2/6_Molly.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Sasha.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Sasha"><img src="portraitpic2/6_Sasha.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Tequila's.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Tequila's"><img src="portraitpic2/6_Tequila's.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Tequila's2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Tequila's"><img src="portraitpic2/6_Tequila's2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_Unise.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Unise"><img src="portraitpic2/6_Unise.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_丁子芸.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 丁子芸"><img src="portraitpic2/6_丁子芸.jpg"  alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_吳同學.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 吳同學"><img src="portraitpic2/6_吳同學.jpg" alt=""></a></li>
+			<li class="pic"><a href="ortraitpic/6_吳同學2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 吳同學"><img src="portraitpic2/6_吳同學2.jpg" alt=""></a></li>
+			<li class="pic"><a href="ortraitpic/6_吳同學3.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 吳同學"><img src="portraitpic2/6_吳同學3.jpg" " alt=""></a></li>
+
+
+			<li class="pic"><a href="portraitpic/6_呂妍芯.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 呂妍芯"><img src="portraitpic2/6_呂妍芯.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_嘉倚.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 嘉倚"><img src="portraitpic2/6_嘉倚.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_奇萱.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 奇萱"><img src="portraitpic2/6_奇萱.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_奇萱2.jp" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 奇萱"><img src="portraitpic2/6_奇萱2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_怡臻.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 怡臻"><img src="portraitpic2/6_怡臻.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_柔恩.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 柔恩"><img src="portraitpic2/6_柔恩.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_柔恩2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 柔恩"><img src="portraitpic2/6_柔恩2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_王麂皮.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 王麂皮"><img src="portraitpic2/6_王麂皮.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_甘紫羚.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 甘紫羚"><img src="portraitpic2/6_甘紫羚.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_黃暐珊.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 黃暐珊"><img src="portraitpic2/6_黃暐珊.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6＿Tracy.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Tracy"><img src="portraitpic2/6＿Tracy.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_ChihHanYang.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Chih Han Yang"><img src="portraitpic2/6_ChihHanYang.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/6_ChihHanYang2" rel="lightbox[roadtrip]" title="TSUVIMI #06 x Chih Han Yang"><img src="portraitpic2/6_ChihHanYang2.jpg" alt=""></a></li>
+
+
+			<li class="pic"><a href="portraitpic/6_李優URIKO .jpg" rel="lightbox[roadtrip]" title="TSUVIMI #06 x 李優U RIKO"><img src="portraitpic2/6_李優URIKO .jpg" alt=""></a></li>
+
+
+			<li class="pic"><a href="portraitpic/7_ 黃暐珊.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #07 x 黃暐珊"><img src="portraitpic2/7_ 黃暐珊.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/7_Aveil.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #07 x Aveil"><img src="portraitpic2/7_Aveil.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/7_Misha.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #07 x Misha"><img src="portraitpic2/7_Misha.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/7_莉莎LisaLai'sDiary.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #07 x 莉莎 Lisa Lai's Diary"><img src="portraitpic2/7_莉莎LisaLai'sDiary.jpg" " alt=""></a></li>
+			<li class="pic"><a href="portraitpic/7_莉莎LisaLai'sDiary2" rel="lightbox[roadtrip]" title="TSUVIMI #07 x 莉莎 Lisa Lai's Diary"><img src="portraitpic2/7_莉莎LisaLai'sDiary2.jpg"  alt=""></a></li>
+
+
+
+
+			<li class="pic"><a href="portraitpic/8_Demi.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Demi"><img src="portraitpic2/8_Demi.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Joan.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Joan"><img src="portraitpic2/8_Joan.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Joanne.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Joanne"><img src="portraitpic2/8_Joanne.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Lizzie.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Lizzie"><img src="portraitpic2/8_Lizzie.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Misha.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Misha"><img src="portraitpic2/8_Misha.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Nikki.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Nikki"><img src="portraitpic2/8_Nikki.jpg" " alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Peggy.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Peggy"><img src="portraitpic2/8_Peggy.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Peggy2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Peggy"><img src="portraitpic2/8_Peggy2.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_Peggy3.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Peggy"><img src="portraitpic2/8_Peggy3.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_姜亭羽.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 姜亭羽"><img src="portraitpic2/8_姜亭羽.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_李宜庭.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 李宜庭"><img src="portraitpic2/8_李宜庭.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_杏儒.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 杏儒"><img src="portraitpic2/8_杏儒.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_王羽.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 王羽"><img src="portraitpic2/8_王羽.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_陳開花.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 陳開花"><img src="portraitpic2/8_陳開花.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_ChengYun.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Cheng Yun"><img src="portraitpic2/8_ChengYun.jpg" " alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_CianCianTseng.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Cian Cian Tseng"><img src="portraitpic2/8_CianCianTseng.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_GwenMiLai.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Gwen Mi Lai"><img src="portraitpic2/8_GwenMiLai.jpg" " alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_海蒂.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 海蒂"><img src="portraitpic2/8_HeidiCool-海蒂.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_JiouJiouLin.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Jiou Jiou Lin"><img src="portraitpic2/8_JiouJiouLin.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_YiCiLuo.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Yi Ci Luo"><img src="portraitpic2/8_YiCiLuo.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_ChengYun2.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x Cheng Yun"><img src="portraitpic2/8_ChengYun2.jpg" " alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_莉莎LisaLai'sDiary.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 莉莎 Lisa Lai's Diary"><img src="portraitpic2/8_莉莎LisaLai'sDiary.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_謝雪莉.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 謝雪莉"><img src="portraitpic2/8_謝雪莉.jpg" alt=""></a></li>
+			<li class="pic"><a href="portraitpic/8_周佳妮.jpg" rel="lightbox[roadtrip]" title="TSUVIMI #08 x 周佳妮"><img src="portraitpic2/8_周佳妮.jpg" " alt=""></a></li>
+			<li class="clear"></li>
+
+		</ul>
+
+	</div>
+
+	
+
+
+	<div class="footer">
+
+		<p><a href="mailto:tsuvimi@gmail.com">Contact Us</a><a href="http://www.pcstore.com.tw/TSUVIMI/">Buy Lipsticks</a></p>
+		<p>TSUVIMI© 2015. <a href="#">PRIVACY POLICY</a></p>
+		<div class="iconall">
+			<a href="https://www.facebook.com/pages/Tsuvimi/774470222615542?sk=timeline"><div class="icon"><img src="footer/facebook.png" height="50" alt=""></div></a>
+			<a href="http://instagram.com/tsuvimi"><div class="icon"><img src="footer/instagram.png" height="50" alt=""></div></a>
+			<a href="https://www.youtube.com/channel/UCE0CYLnGZBffLOQG5d0pw3A"><div class="icon"><img src="footer/youtube.png" height="50" alt=""></div></a>
+		</div>
+	</div>
+
+
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		
+
+	$(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 350) {
+                $('#menu').fadeIn(800);
+            } else {
+                $('#menu').fadeOut(800);
+            }
+        });
+    });
+
+	})
+         
+   
+</script>
+</body>
+</html>

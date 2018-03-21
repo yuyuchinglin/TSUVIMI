@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TSUVIMI</title>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		list-style:none;
+
+	}
+
+
+
+
+
+
+/*fixed black menu*/
+
+
+	@media (min-width: 768px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 60px;
+		position:relative;
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		height: 60px;
+
+
+		
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	}
+
+	@media (max-width: 767px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 90px;
+		position:relative;
+
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		
+		width: 100%;
+		height: 60px;
+		text-align:center;
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+		margin-top: 39px;
+		
+	}
+
+	.logo {
+		text-align:center;
+	}
+
+	}
+
+	.menublack a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+	.active {
+		color:#ffb0b0;
+	}
+
+
+
+/*JQ menu*/
+
+	.nav {
+		width: 100%;
+		height:60px;
+		background-color: rgba(50, 50, 50, 0.5);
+		position:relative;
+		position:fixed;
+		top:0px;
+		background-color:rgba(60,60,60,1.0);
+		color: #FFFFFF;
+		z-index:9999;
+
+	}
+
+	
+	@media (min-width:768px) {
+	.menu {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		
+	}
+	}
+
+	.nav .menu  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	@media (max-width:767px) {
+		.nav {height: 90px;}
+		.menu {
+			position:absolute;
+			bottom:0;
+			right:0;
+			width: 100%;
+			text-align:center;
+		}
+		.logo {
+			text-align:center;
+		}
+	}
+
+	.menu a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+
+/*slider*/
+
+	.slider {
+		width: 100%;
+		height: 680px;
+		position:relative;
+		overflow:hidden;
+	}
+
+	@media (max-width:767px) {
+		.slider {height: 280px;}
+	}
+
+	@media (min-width:768px) {
+		.slider {height: 520px;}
+	}
+
+	@media (min-width:992px) {
+		.slider {height: 600px;}
+	}
+
+	@media (min-width:1200px) {
+		.slider {height: 680px;}
+	}
+
+
+	.slider_content {
+		width: 100%;
+		height: 90%;
+		position:absolute;
+	}
+
+	.slider_content li {
+		width: 100%;
+		height: 100%;
+		position:absolute;
+		left:110%;
+		top:0;
+	}
+	
+	.slider_content li:first-child {
+		background-color: #222;
+		background: url(sliderpic/lipstickcover.jpg) center right no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		left:0;
+		position:absolute;
+	}
+
+	.slider_content li:last-child {
+		background-color: #1af;
+		background: url(sliderpic/biglip.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.slider_content li:nth-child(3) {
+		background-color: #ea5;
+		background: url(sliderpic/flirtypink..jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.slider_content li:nth-child(4) {
+		background-color: #a13;
+		background: url(sliderpic/orangepop.jpg) center center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.slider_content li:nth-child(2) {
+		background-color: #0aa;
+		background: url(sliderpic/midnight.jpg) top center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+
+	.prev, .next {
+		width: 70px;
+		height: 70px;
+		position:absolute;
+		text-decoration:none;
+		/*border-radius:50%;
+		background-color:rgba(180, 180, 180, 0.5);*/
+		color:#ddd;
+		text-align:center;
+		top:40%;
+		z-index:10;
+
+	}
+
+	.prev {
+		left:1%;
+	}
+
+	.next {
+		right:1%;
+	}
+
+	
+	@media (min-width:768px) {
+		.slider_control {
+			text-align:center;
+			width: 100%;
+			height: 10%;
+			font-size: 0;
+			overflow:hidden;
+			position:absolute;
+			bottom:0;
+		}
+
+		.slider_control li{
+			display:inline-block;
+			width: 20%;
+			height: auto;
+			background-color: #a00;
+			-webkit-filter: grayscale(100%);
+	   		-moz-filter: grayscale(100%);
+	   		-ms-filter: grayscale(100%);
+	   		-o-filter: grayscale(100%);
+	    
+	  		 filter: grayscale(100%);
+		
+	  		 filter: gray;
+		}
+
+		.slider_control li:hover{
+			 -webkit-filter:saturate(0.8);
+		}
+	
+
+		.slider_control img {
+			width: auto;
+		}
+	}
+
+	@media (max-width:767px) {
+		.slider_content {
+			height:92%;
+		}
+
+		.slider_control {
+			text-align:center;
+			width: 100%;
+			height: 8%;
+			font-size: 0;
+			overflow:hidden;
+			position:absolute;
+			bottom:0;
+			background-color: #444;
+
+		}
+
+		.slider_control li{
+			display:inline-block;
+			margin-top: 4px;
+			width: 20%;
+			height: auto;
+			background-color: #a00;
+	
+		
+	  		
+		}
+
+		.slider_control li:hover{
+			 -webkit-filter:saturate(0.5);
+		}
+
+		.slider_control img {
+			display:none;
+		}
+		.slider_control li{
+			display:inline-block;
+			width: 13px;
+			height: 13px;
+			border-radius:50%;
+			background-color: #aaa;
+			margin-left: 5px;
+		}
+	}
+	
+	.now{
+			 -webkit-filter:saturate(0.5);
+	}
+
+
+
+
+
+
+
+
+/*cards*/
+
+	.cards {
+		display:block;
+		width: 100%;
+		height: auto;	
+	
+	/*	bottom:0;*/
+		
+
+
+	}
+
+	.cards {
+		perspective: 2000px;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		transform-origin:center center;
+		text-align:center;
+
+
+	}
+	
+	body {
+		background-color: #a30;
+	}
+
+
+	.cards div {
+
+		display:inline-block;
+		height: 20vw;
+		width: 20vw;
+		border:3px solid silver;
+		border-radius:15px;
+		position:relative;
+		backface-visibility: hidden;
+		webkit-backface-visibility: hidden;
+		box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+		transform-style: preserve-3d;
+		webkit-transform-style: preserve-3d;
+		transition: all 2s 0s ;
+		-webkit-transition: all 1.5s 0.2s ;
+		margin-right: 1vw;
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+	}
+
+/*	@media (max-width:767px) {
+		.cards div {height: 33vw;
+					width: 33vw;
+					margin-right: 3vw;}
+	}*/
+
+	
+
+	.cards div:before {
+		content:' ';
+		display:block;
+		width: 100%;
+		height: 100%;
+		border-radius:15px;
+		border:3px solid silver;
+		background-size:150%;
+		position:absolute;
+		left:0;
+		top:0;
+		transform:translate3d(0px,0px,-1px) rotateY(180deg);
+		-webkit-transform:translate3d(0px,0px,-2px) rotateY(180deg);
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		perspective: 2000px;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+		-webkit-background-size: cover;
+		background-size: cover;
+
+	}
+
+	.card1{
+		background: silver url(cardsmallpic/1_ChihHanYang1.jpg) center center no-repeat;
+		animation:gogo 1.6s 0s cubic-bezier(.27,.77,.36,.86);
+		
+	}
+
+	.card1:before {
+		background: silver url(cardsmallpic/1_topic.jpg) center center no-repeat;
+
+		
+	}
+
+	.card2{
+		background: silver url(cardsmallpic/2_ChengYun.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.2s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card2:before {
+		background: silver url(cardsmallpic/2_topic.jpg) top center no-repeat;
+		
+	}
+
+	.card3{
+		background: silver url(cardsmallpic/3_Ashley.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.4s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card3:before {
+		background: silver url(cardsmallpic/3_topic.jpg) top center no-repeat;
+		
+	}
+	
+	.card4{
+		background: silver url(cardsmallpic/4_Sonia.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.6s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card4:before {
+		background: silver url(cardsmallpic/4_topic.jpg) top center no-repeat;
+		
+	}
+
+	.card5{
+		background: silver url(cardsmallpic/5_奇萱.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.1s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card5:before {
+		background: silver url(cardsmallpic/5_topic.jpg) top center no-repeat;
+	}
+
+	.card6 {
+		background: silver url(cardsmallpic/6_王麂皮.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.3s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card6:before {
+		background: silver url(cardsmallpic/6_topic.jpg) top center no-repeat;
+	}
+
+	.card7{
+		background: silver url(cardsmallpic/7_Aveil.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.5s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card7:before {
+		background: silver url(cardsmallpic/7_topic.jpg) top center no-repeat;
+	}
+
+	.card8{
+		background: silver url(cardsmallpic/8_ChengYun.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.7s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card8:before {
+		background: silver url(cardsmallpic/8_topic.jpg) top center no-repeat;
+	}
+	.cards div:hover {
+		transform: rotateY(180deg);
+	}
+
+	@keyframes gogo {
+		0%{transform:rotateY(-270deg);}
+		100%{transform:rotateY(360deg);}
+	}
+
+
+/*about*/
+
+	.menuabout {
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		text-align:center;
+		font-family: '微軟正黑體';
+		text-decoration:none;
+		font-size: 0;
+
+	}
+	
+
+	
+	@media (max-width: 767px) {
+		.circle {
+			width: 72px;
+			height: 72px;
+			background: rgba(256,256,256, 0.2);
+			
+			border-radius:50%;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			margin-left:2px;
+
+			display:inline-block;
+			text-align:center;
+
+		}
+
+
+	
+
+		.circle h3 {
+			margin-top: 12px;
+			font-size: 18px;
+			color:#eee;
+			display:block;
+			margin-right: 15px;
+			margin-left: 15px;
+			
+			/*line-height: 60px;*/
+		}
+
+		.circle p {
+			display:none;
+		}
+	
+
+	
+	}
+
+
+	@media (min-width: 768px) {
+		.circle {
+			width: 120px;
+			height: 120px;
+			background: rgba(200, 200, 200, 0.3);
+			
+			border-radius:50%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left:5px;
+
+			display:inline-block;
+			text-align:center;
+			/*float:left;*/
+		}
+
+		.circle h3 {
+			margin-top: 20px;
+			font-size: 28px;
+			color:#eee;
+			display:block;
+			margin-right: 20px;
+			margin-left: 20px;	
+		}
+
+		.circle p {
+			display:none;
+		}
+
+	}
+
+	@media (min-width: 992px) {
+		.circle {
+			width: 240px;
+			height: 240px;
+			background: rgba(200, 200, 200, 0.3);
+			
+			border-radius:50%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left:3%;
+
+			display:inline-block;
+			text-align:center;
+/*			float:left;*/
+		}
+
+		.circle h3 {
+			margin-top: 25px;
+			font-size: 30px;
+			color:#eee;
+			display:block;
+			margin-right: 20px;
+			margin-left: 20px;
+			border-bottom:1px #eee solid;
+			line-height: 60px;
+		}
+
+		.circle p {
+			display:block;
+			padding-top: 10px;
+			padding-right: 20px;
+			padding-left: 20px;	
+			font-size: 16px;
+			line-height: 30px;	
+			color:#ddd;
+		}
+	}
+
+	.clear {
+		clear:both;
+	}
+	
+
+
+
+
+
+
+
+
+/*album*/
+
+
+	.album {
+		width: 100%;
+		height: auto;
+		background: url(albumpic/albumbig.jpg) center center no-repeat ;
+		-webkit-background-size: cover;
+		background-size: cover;
+		text-decoration:none;
+		/*-webkit-filter:opacity(.5);*/
+	}
+
+	.b {
+		width: 100%;
+		height: auto;
+		background-color: rgba(200, 200, 200, 0.5);
+
+	}
+
+	.a {
+		width: 100%;
+		
+	}
+
+	.b h5 {
+		font-size: 120px;
+		color:#d40;
+		text-align:center;
+		line-height: 30vw;
+		font-family: 'Arial';
+
+	}
+
+
+	
+	@media (max-width:767px) {
+		.b h5 {
+			font-size: 50px;}
+	}
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+	.footer {
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		padding: 15px 30px;
+		color:#ddd;
+		text-align:center;
+		box-sizing:border-box;
+		position:relative;
+	}
+
+	.footer a {
+		text-decoration:none;
+		color:#ddd;
+		margin-right: 15px;
+		line-height: 30px;
+		box-sizing:border-box;
+	}
+
+	.footer>p:first-child>a:first-child {
+		color:#dd0;
+	}
+
+	.footer>p:first-child>a:nth-child(2) {
+		color:#f6cada;
+	}
+	
+	.footer>p:first-child>a:hover {
+		color:#be0d0d;
+	}
+
+
+	.footer>p>a:hover {
+		color:#f69274;
+	}
+	
+	.iconall {
+		position:absolute;
+		right:25px;
+		bottom:3px;
+
+		height: 50px;
+		bottom:15px;
+
+	
+		
+
+	}
+
+	.icon {
+		display:inline-block;
+	
+		
+
+	}
+
+
+	@media (max-width: 767px) {
+		.iconall {display:none;}
+		.footer {font-size: 15px;}
+		.footer a {line-height: 20px;}
+	}
+
+
+	.icon:hover {
+		animation:icon 1s  infinite ;
+	}
+
+	@keyframes icon{
+		0% {transform: scale(1,1); top:0;}
+		40% {transform: scale(0.7,1); top:0;}
+		80% {transform: scale(1,0.8); top:0;}
+		100% {transform: scale(1,1); top:0;}
+	}
+
+
+</style>
+
+</head>
+
+
+<body>
+	<div class="navblack">
+		<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+		<div class="menublack">
+				<a href="index.html" class="current active">Home</a>
+				<a href="../About/about.html">About</a>
+				<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+				<a href="../album/album.html">Album</a>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- <div class="nav" id="menu">
+			<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+			<div class="menu">
+					<a href="index.html" class="current active">Home</a>
+					<a href="../About/about.html">About</a>
+					<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+					<a href="../album/album.html">Album</a>
+			</div>
+
+		</div> -->
+
+
+
+	<div class="slider">
+		<ul class="slider_content">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="slider_control">
+			<li><img src="sliderpic/lipstickcoversma.jpg" width="374" height="68" right alt=""></li>
+			<li><img src="sliderpic/midnightsma.jpg" width="374" height="68" alt=""></li>
+			<li><img src="sliderpic/flirtypinksma.jpg"  width="374" height="68" alt=""></li>
+			<li><img src="sliderpic/orangepopsma.jpg" width="374" height="68" alt=""></li>
+			<li><img src="sliderpic/biglipsma.jpg" width="374" height="68" alt=""></li>
+		</ul>
+		<a href="#" class="prev"><img src="sliderpic/left.png" width="20" alt=""></a>
+		<a href="#" class="next"><img src="sliderpic/right.png" width="20" alt=""></a>
+	</div>
+
+
+	
+	<div class="cards">
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197005.htm"><div class="card1"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197561.htm"><div class="card2"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197611.htm"><div class="card3"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15309977.htm"><div class="card4"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15318342.htm"><div class="card5"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15318495.htm"><div class="card6"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M17663851.htm"><div class="card7"></div></a>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M17664514.htm"><div class="card8"></div></a>
+	</div>
+
+
+	
+		<div class="menuabout">
+		<a href="../About/about.html#area1">
+			<div class="circle">
+				<h3>品牌介紹</h3>
+				<p>我們是來自臺灣的彩妝品牌Tsuvimi，旗下所有的商品，皆為研發團隊自行研發與臺灣製造...</p>
+			</div>
+		</a>
+		<a href="../About/about.html#area2">
+			<div class="circle">
+				<h3>研發動機</h3>
+				<p>唇膏的主要成份為油脂、蠟以及色素，其中又以色素對人體的危害最鉅。Tsuvimi決定...</p>
+			</div>
+		</a>
+		
+		<a href="../About/about.html#area3">
+			<div class="circle">				
+				<h3>使用說明</h3>
+				<p>如何正確使用不沾杯持久唇彩，讓他緊貼肌膚達到長時間不脫妝，保持完好妝容一整天！</p>
+			</div>
+		</a>
+		<a href="../About/about.html#area4">
+			<div class="circle">
+			<h3>問題指南</h3>
+			<p>上妝前可以擦護唇膏嗎？為什麼唇紋有點明顯、乾乾的？產品使用有其它要注意的嗎？</p>
+		</div>
+		</a>
+		
+		<!-- <div class="clear"></div> -->
+		
+	</div>
+
+
+	<div class="album">
+		<div class="b">
+			<a href="../album/album.html"><h5>ALBUM</h5></a>
+		</div>
+	</div>
+	<div class="footer">
+
+		<p><a href="mailto:tsuvimi@gmail.com">Contact Us</a><a href="http://www.pcstore.com.tw/TSUVIMI/">Buy Lipsticks</a></p>
+		<p>TSUVIMI© 2015. <a href="#">PRIVACY POLICY</a></p>
+		<div class="iconall">
+			<a href="https://www.facebook.com/pages/Tsuvimi/774470222615542?sk=timeline"><div class="icon"><img src="footer/facebook.png" height="50" alt=""></div></a>
+			<a href="http://instagram.com/tsuvimi"><div class="icon"><img src="footer/instagram.png" height="50" alt=""></div></a>
+			<a href="https://www.youtube.com/channel/UCE0CYLnGZBffLOQG5d0pw3A"><div class="icon"><img src="footer/youtube.png" height="50" alt=""></div></a>
+		</div>
+	</div>
+
+
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		var sliderCount=$('.slider_content li').length ;
+
+		// for(var i=0 ; i<sliderCount ; i++){
+		// 	$('.slider_control').append("<li>"+"</li>");
+		// }
+
+		var nowIndex=0 ;
+		
+
+		$('.next').click(function(){
+			$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:"-100%"});
+			
+			if(nowIndex<sliderCount-1){
+				nowIndex++;
+			}else{
+				nowIndex=0;
+			}
+		
+		$('.slider_content li').eq(nowIndex).css({left:"100%"});
+		$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:0});
+		})
+
+
+
+		$('.prev').click(function(){
+			$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:"100%"});
+			
+			if(nowIndex>0){
+				nowIndex--;
+			}else{
+				nowIndex=4;
+			}
+		
+		$('.slider_content li').eq(nowIndex).css({left:"-100%"});
+		$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:0});
+		})
+
+
+
+
+		$('.slider_control li').click(function(){
+			$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:"-100%"});
+			
+			nowIndex=$(this).index();
+		
+		$('.slider_content li').eq(nowIndex).css({left:"100%"});
+		$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:0});
+		})
+
+
+
+		var tt = setInterval(pp,2800);
+
+		function pp(){
+			$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:"-100%"});
+			
+			if(nowIndex<sliderCount-1){
+				nowIndex++;
+			}else{
+				nowIndex=0;
+			}
+		
+			$('.slider_content li').eq(nowIndex).css({left:"100%"});
+			$('.slider_content li').eq(nowIndex).stop(true,true).animate({left:0});
+		}
+
+		$('.slider_content li').hover(function(){clearInterval(tt);},function(){tt=setInterval(pp,2800);})
+		$('.prev').hover(function(){clearInterval(tt);},function(){tt=setInterval(pp,2800);})
+		$('.next').hover(function(){clearInterval(tt);},function(){tt=setInterval(pp,2800);})
+		$('.slider_control li').hover(function(){clearInterval(tt);},function(){tt=setInterval(pp,2800);})
+
+
+	$(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 350) {
+                $('#menu').fadeIn(800);
+            } else {
+                $('#menu').fadeOut(800);
+            }
+        });
+    });
+
+	})
+         
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style:none;
+	}
+	.album{
+			width: 100vw;
+			/*transform:translate3d(0, 0, 0);*/
+		}
+	.album img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 100%;
+		width: auto;
+
+	}
+	.album a{
+		display:block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		box-sizing: border-box;
+		border:1px solid #eee;
+	}
+	
+
+	@media (min-width: 768px) and (max-width:992px){
+		
+		.album .pic{
+			position: relative;
+			width: 9.9999999999% ;
+			height: 0;
+			padding-top: 9.9999999999%;
+			float: left;
+			will-change: all;
+		}
+		.album .pic:nth-child(24n+4),
+		.album .pic:nth-child(24n+8){
+			width: 19.9999999999%;
+			padding-top: 19.9999999999%;
+		}
+		.album .pic:nth-child(24n+9),
+		.album .pic:nth-child(24n+11),
+		.album .pic:nth-child(24n+13),
+		.album .pic:nth-child(24n+17),
+		.album .pic:nth-child(24n+19),
+		.album .pic:nth-child(24n+21){
+			margin-top: -9.9999999999%;
+		}
+	}
+	@media (min-width: 992px) and (max-width:1200px){
+		
+		.album .pic{
+			position: relative;
+			width: 9.9999999999%;
+			height: 0;
+			padding-top: 9.9999999999%;
+			float: left;
+			will-change: auto;
+		}
+		.album .pic:nth-child(24n+1),
+		.album .pic:nth-child(24n+6){
+			width: 19.9999999999%;
+			padding-top: 19.9999999999%;
+		}
+		.album .pic:nth-child(24n+13),
+		.album .pic:nth-child(24n+15),
+		.album .pic:nth-child(24n+17),
+		.album .pic:nth-child(24n+19){
+			margin-top: -9.9999999999%;
+		}
+	}
+	@media (min-width: 1200px){
+		
+		.album .pic{
+			position: relative;
+			width: 9.9999999999%;
+			height: 0;
+			padding-top: 9.9999999999%;
+			float: left;
+			will-change: all;
+		}
+		.album .pic:nth-child(21n+3),
+		.album .pic:nth-child(21n+7),
+		.album .pic:nth-child(21n+18){
+			width: 19.9999999999%;
+			padding-top: 19.9999999999%;
+		}
+		.album .pic:nth-child(21n+10),
+		.album .pic:nth-child(21n+12),
+		.album .pic:nth-child(21n+16),
+		.album .pic:nth-child(21n+18){
+			margin-top: -9.9999999999%;
+		}
+	}
+	@media (max-width: 767px){
+		.album .pic{
+			position: relative;
+			width: 25%;
+			height: 0;
+			padding-top: 25%;
+			float: left;
+		}
+		.album .pic:nth-child(12n+5){
+			width: 75%;
+			padding-top: 75%;
+		}
+		.album .pic:nth-child(12n+9){
+			width: 75%;
+			padding-top: 75%;
+			float: right;
+		}
+	}
+	</style>
+</head>
+<body>
+	<ul class="album">
+		<li class="pic"><a href="#"><img src="portraitpic/1_ChihHanYang1.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_ChihHanYang2.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_Debbie.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_Sasha.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_Ting.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_季璇.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/1_楊菲奈Fina.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/2_ChengYun.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/2_Jessie.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/2_Yvonne.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_Ashley.jpg" height="959" width="959" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_Aveil.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_Aveil2.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_Jean.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_JIA零加.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_Wendy.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_劉裳霓.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_奇萱.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_李優URIKO.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_徐韻淇.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_翁嘉薇.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_陳嘎嘎.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_LinJia.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_林幸潔LilliLin.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_林幸潔LilliLin2.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/3_林幸潔LilliLin3.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/4_Koren.jpg" height="1800" width="1800" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/4_Koren2.jpg" height="1800" width="1800" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/4_Sonia.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/4_馬迪.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/4_PhoebeLin林子君.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_Angela.jpg" height="2034" width="2048" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_Angela2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_Tracy.jpg" height="878" width="878" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_奇萱.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_安安.jpg" height="935" width="935" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_安安2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/5_黃懷緣ArielleHuang.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Debbie.jpg" height="720" width="720" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Erika.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Jean.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Miars.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Molly.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Sasha.jpg" height="684" width="684" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Tequila's.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Tequila's2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_Unise.jpg" height="719" width="719" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_丁子芸.jpg" height="1350" width="1350" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_吳同學.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_吳同學2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_吳同學3.jpg" height="1794" width="1794" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_呂妍芯.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_嘉倚.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_奇萱.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_奇萱2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_怡臻.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_柔恩.jpg" height="684" width="684" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_柔恩2.jpg" height="751" width="751" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_王麂皮.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_甘紫羚.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_黃暐珊.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6＿Tracy.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_ChihHanYang.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_ChihHanYang2.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/6_李優URIKO .jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/7_ 黃暐珊.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/7_Aveil.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/7_Misha.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/7_莉莎LisaLai'sDiary.jpg" height="1279" width="1279" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/7_莉莎LisaLai'sDiary2.jpg" height="1148" width="1148" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Demi.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Joan.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Joanne.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Lizzie.jpg" height="953" width="952" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Misha.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Nikki.jpg" height="1080" width="1080" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Peggy.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Peggy2.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_Peggy3.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_姜亭羽.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_李宜庭.jpg" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_杏儒.jpg" height="892" width="892" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_王羽.jpg" height="720" width="720" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_陳開花.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_ChengYun.jpg" height="1872" width="1872" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_CianCianTseng.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_GwenMiLai.jpg" height="1364" width="1364" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_HeidiCool-海蒂.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_JiouJiouLin.jpg" height="960" width="960" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_YiCiLuo.jpg" height="877" width="877" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_ChengYun2.jpg" height="1280" width="1280" alt=""></a></li>
+		<li class="pic"><a href="#"><img src="portraitpic/8_莉莎LisaLai'sDiary.jpg" height="981" width="981" alt=""></a></li>
+		
+
+	</ul>
+</body>
+</html>

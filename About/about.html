@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TSUVIMI About</title>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		list-style:none;
+		font-family: '微軟正黑體';
+
+	}
+
+
+
+
+
+
+/*fixed black menu*/
+
+
+	@media (min-width: 768px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 60px;
+		position:relative;
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		height: 60px;
+
+
+		
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	}
+
+	@media (max-width: 767px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 90px;
+		position:relative;
+
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		
+		width: 100%;
+		height: 60px;
+		text-align:center;
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+		margin-top: 39px;
+		
+	}
+
+	.logo {
+		text-align:center;
+	}
+
+	}
+
+	.menublack a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+	.active {
+		color:#ffb0b0;
+	}
+
+
+
+/*JQ menu*/
+
+	.nav {
+		width: 100%;
+		height:60px;
+		background-color: rgba(50, 50, 50, 0.5);
+		position:relative;
+		position:fixed;
+		top:0px;
+		background-color:rgba(60,60,60,1.0);
+		color: #FFFFFF;
+		z-index:9999;
+
+	}
+
+	
+	@media (min-width:768px) {
+	.menu {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		
+	}
+	}
+
+	.nav .menu  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	@media (max-width:767px) {
+		.nav {height: 90px;}
+		.menu {
+			position:absolute;
+			bottom:0;
+			right:0;
+			width: 100%;
+			text-align:center;
+		}
+		.logo {
+			text-align:center;
+		}
+	}
+
+	.menu a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+
+
+
+/*begin*/
+	
+	.menuabout {
+		width: 100%;
+		height: auto;
+		background-color: #f07f7f;
+		text-align:center;
+		font-family: '微軟正黑體';
+		text-decoration:none;
+		font-size: 0;
+
+	}
+	
+
+	
+	@media (max-width: 767px) {
+		.circle {
+			width: 72px;
+			height: 72px;
+			background: rgba(251,241,83, 0.3);
+			
+			border-radius:50%;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			margin-left:2px;
+
+			display:inline-block;
+			text-align:center;
+
+		}
+
+
+	
+
+		.circle h3 {
+			margin-top: 12px;
+			font-size: 18px;
+			color:#eee;
+			display:block;
+			margin-right: 15px;
+			margin-left: 15px;
+			
+			/*line-height: 60px;*/
+		}
+
+		.circle p {
+			display:none;
+		}
+	
+
+	
+	}
+
+
+	@media (min-width: 768px) {
+		.circle {
+			width: 120px;
+			height: 120px;
+			background: rgba(251,241,83, 0.3);
+			
+			border-radius:50%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left:5px;
+
+			display:inline-block;
+			text-align:center;
+			/*float:left;*/
+		}
+
+		.circle h3 {
+			margin-top: 20px;
+			font-size: 28px;
+			color:#eee;
+			display:block;
+			margin-right: 20px;
+			margin-left: 20px;	
+		}
+
+		.circle p {
+			display:none;
+		}
+
+	}
+
+	@media (min-width: 992px) {
+		.circle {
+			width: 240px;
+			height: 240px;
+			background: rgba(251,241,83, 0.3);
+			
+			border-radius:50%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left:1vw;
+
+			display:inline-block;
+			text-align:center;
+/*			float:left;*/
+		}
+
+		.circle h3 {
+			margin-top: 15px;
+			font-size: 30px;
+			color:#eee;
+			display:block;
+			margin-right: 20px;
+			margin-left: 20px;
+			border-bottom:1px #eee solid;
+			line-height: 60px;
+
+		}
+
+		.circle p {
+			display:block;
+			padding-top: 10px;
+			padding-right: 20px;
+			padding-left: 20px;	
+			font-size: 16px;
+			line-height: 30px;	
+			color:#333;
+		}
+	}
+
+	.clear {
+		clear:both;
+	}
+
+
+
+	
+	h4 {
+		color:#eee;
+		font-size: 48px;
+		text-align:center;
+		margin-bottom: 20px;
+		margin-top: 20px;
+
+	}
+	
+	.a1 p ,
+	.a2 p ,
+	.a3 p ,
+	.a4 p{
+		color:#eee;
+		
+		line-height: 35px;
+		text-align:center;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+
+	.a4 p {
+		text-align:left;
+		color:#eee;
+		line-height: 30px;
+		display:block;
+		background-color: #999;
+		padding:10px;
+		border-radius:10px;
+	}
+
+	.a1 h5 {
+		font-size: 22px;
+		color:#f5efbc;
+		text-align:center;
+		line-height: 35px;
+	}
+
+	.a2 h6 {
+		color:#eee;
+		line-height: 30px;
+		font-size: 18px;
+		text-align:center;
+		margin-bottom: 2px;
+	}
+
+	.a4 h5 {
+		line-height: 50px;
+		font-size: 20px;
+		margin-left: -40px;
+	}
+
+	@media (max-width: 767px) {
+		.a4 h5 {
+			font-size: 18px;
+			line-height: 40px;
+			margin-left: -10px;
+		}
+
+		.a4 .b {
+			width: 80%;
+			padding: 20px 15px;
+		}
+
+	}
+
+	.a1 {
+		width: 100%;
+		height: auto;
+		background-color: #d14242;
+		padding-bottom: 10px;
+
+
+	}
+
+	.b {
+		width: 60%;
+		height:auto;
+		margin:0 auto;
+		padding: 10px 35px;
+
+	}
+
+
+
+
+	.a2 {
+		width: 100%;
+		height: auto;
+		background-color: #e67061;
+		padding-bottom: 10px;
+	}
+
+
+
+	.a3 {
+		width: 100%;
+		height: auto;
+		background-color: #444;
+		text-align: center;
+	}
+	
+	.a4 {
+		width: 100%;
+		height: auto;
+		background-color: #f69e9e;
+		padding-bottom: 10px;
+	}
+
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+	}
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	.top {
+		position:fixed;
+		height: 50px;
+		width: 50px;
+		border-radius:50%;
+		bottom: 20px;
+		right:20px;
+		background-color: #fff;
+		box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+		z-index:10;
+	}
+
+	.top img {
+		position:absolute;
+		top:13px;
+		left:12px;
+	}
+	
+
+	@media (max-width: 767px) {
+		.a1 .b, .a2 .b {
+			width: 90%;
+			margin-right: 0;
+			padding: 5px 15px;
+
+		}
+		.top {
+			display:none;
+		}
+		h4 {
+			font-size: 36px;
+			line-height: 40px;
+		}
+
+		p {font-size: 17px;
+			line-height: 12px;
+			margin-bottom: 0;}
+	}
+
+	@media (min-width: 768px) {
+		.a1 .b, .a2 .b {
+				width: 80%;	
+			}
+
+	}
+
+	@media (min-width: 992px) {
+		.a1 .b, .a2 .b {
+				width: 60%;
+				
+
+			}
+
+
+	}
+
+
+	/*footer*/
+
+	.footer {
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		padding: 15px 30px;
+		color:#ddd;
+		text-align:center;
+		box-sizing:border-box;
+		position:relative;
+	}
+
+	.footer a {
+		text-decoration:none;
+		color:#ddd;
+		margin-right: 15px;
+		line-height: 30px;
+		box-sizing:border-box;
+	}
+
+	.footer>p:first-child>a:first-child {
+		color:#dd0;
+	}
+
+	.footer>p:first-child>a:nth-child(2) {
+		color:#f6cada;
+	}
+	
+	.footer>p:first-child>a:hover {
+		color:#be0d0d;
+	}
+
+
+	.footer>p>a:hover {
+		color:#f69274;
+	}
+	
+	.iconall {
+		position:absolute;
+		right:25px;
+		bottom:3px;
+
+		height: 50px;
+		bottom:15px;
+
+	
+		
+
+	}
+
+	.icon {
+		display:inline-block;
+	
+		
+
+	}
+
+
+	@media (max-width: 767px) {
+		.iconall {display:none;}
+		.footer {font-size: 15px;}
+		.footer a {line-height: 20px;}
+	}
+
+
+	.icon:hover {
+		animation:icon 1s  infinite ;
+	}
+
+	@keyframes icon{
+		0% {transform: scale(1,1); top:0;}
+		40% {transform: scale(0.7,1); top:0;}
+		80% {transform: scale(1,0.8); top:0;}
+		100% {transform: scale(1,1); top:0;}
+	}
+
+
+</style>
+
+</head>
+
+
+<body>
+	<a href="#area0">
+	<div class="top"><img src="navpic/totop.png" height="18" alt=""></div>
+	</a>
+
+	<div class="navblack" id="area0">
+		<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+		<div class="menublack">
+				<a href="../home/index.html" class="current">Home</a>
+				<a href="about.html">About</a>
+				<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+				<a href="../album/album.html">Album</a>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="nav" id="menu">
+			<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+			<div class="menu">
+					<a href="../home/index.html" class="current">Home</a>
+					<a href="about.html">About</a>
+					<a href="../Lipsticks/Lipsticks.html">Lipsticks</a>
+					<a href="../album/album.html">Album</a>
+			</div>
+
+		</div>
+
+
+	<div class="menuabout">
+		<a href="#area1">
+			<div class="circle">
+				<h3>品牌介紹</h3>
+				<p>我們是來自臺灣的彩妝品牌Tsuvimi，旗下所有的商品，皆為研發團隊自行研發與臺灣製造...</p>
+			</div>
+		</a>
+		<a href="#area2">
+			<div class="circle">
+				<h3>研發動機</h3>
+				<p>唇膏的主要成份為油脂、蠟以及色素，其中又以色素對人體的危害最鉅。Tsuvimi決定...</p>
+			</div>
+		</a>
+		
+		<a href="#area3">
+			<div class="circle">				
+				<h3>使用說明</h3>
+				<p>如何正確使用不沾杯持久唇彩，讓他緊貼肌膚達到長時間不脫妝，保持完好妝容一整天！</p>
+			</div>
+		</a>
+		<a href="#area4">
+			<div class="circle">
+			<h3>問題指南</h3>
+			<p>上妝前可以擦護唇膏嗎？為什麼唇紋有點明顯、乾乾的？產品使用有其它要注意的嗎？</p>
+		</div>
+		</a>
+		
+		<div class="clear"></div>
+		
+	</div>
+			
+	<div class="a1" id="area1">
+		<div class="b b1">
+			<h4>品牌介紹</h4>
+			
+			<h5>Tsuvimi 姿慧美</h5>
+			<p>取自姿慧美的音，「姿」外在的姿色，「慧」內在的涵養，「美」永恆的美麗。Tsuvimi，代表著內外兼具的女人有著永恆的美。</p>
+			<h5>｜ Tsuvimi from Taiwan ｜</h5>
+			<p>我們是來自臺灣的彩妝品牌，旗下所有的商品，皆為研發團隊自行研發與臺灣製造，並通過SGS重金屬含量檢測以及總生菌數檢測。</p>
+			<p>我們希望在合理的利潤下，提供貼心的價格給消費者，全年無折扣，讓每個女孩都有輕鬆變美的選擇！</p>
+		</div>
+		
+		
+	</div>
+	<div class="a2" id="area2">
+		<div class="b b2">
+			<h4>研發動機</h4>
+			<p>女孩妳知道嗎？ 根據2011年加拿大公布研究結果顯示，平均每週6天使用唇膏的女性，一生中會不自覺吃進約4磅（約1800g）的唇膏，而唇膏的主要成份為油脂、蠟以及色素，其中又以色素對人體的危害最鉅。基於健康、安全及方便性，Tsuvimi決定投入不沾杯唇彩的研發。</p>
+			<h6>既要唇彩好上色，又要能不沾杯；</h6>
+			<h6>既要唇彩快乾，又要唇部不乾澀；</h6>
+			<h6>既要唇彩顯色，又不可色素沉澱；</h6>
+			<h6>既要唇妝持久，又要輕鬆好卸妝。</h6>
+			<p>為了研發這項充滿「衝突性」的產品，且要讓所有衝突性的功能整合在一起是不容易的，研發團隊經歷了五年的研究與測試，最終誕生了「不沾杯持久唇彩」。</p>
+		</div>
+		
+
+	</div>
+	<div class="a3" id="area3">
+		<div class="b b3">
+			<h4>使用說明</h4>
+
+		</div>
+		<div class="video-container">
+			<iframe width="1280" height="720" src="https://www.youtube.com/embed/nlSRlYbk4PE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+	</div>
+	<div class="a4" id="area4">
+		<div class="b b4">
+			<h4>問題指南</h4>
+			<h5>Ｑ 上妝前可以擦護唇膏嗎？</h5>
+			<p>不沾杯持久唇彩乾了之後是高分子彈性薄膜，可以長時間緊貼肌膚，如果先擦護唇膏，產品將無法緊貼肌膚，會影響不沾杯功能。</p>
+			<h5>Ｑ唇彩擦起來為什麼會不均勻？</h5>
+			<p>上妝時需要均勻擦拭在唇部，來回輕輕推開越薄越好。第一次使用的女孩可以多練習個幾次，慢慢上手。</p>
+			<h5>Ｑ 上妝時會有屑屑是正常的嗎？</h5>
+			<p>不沾杯持久唇彩在乾燥的過程中會慢慢形成薄膜（需靜待約2分鐘），這個時候應要避免碰觸。如果在這個過程中再繼續疊擦或是抿嘴，薄膜會因為摩擦互相沾黏產生屑屑，就無法有美美的唇妝了。</p>
+			<h5>Ｑ 另一頭亮亮的什麼時候使用呢？</h5>
+			<p>不沾杯持久唇彩在乾燥後表面會浮出一層油脂，此時已經是不沾杯的狀態了，建議在完全乾透後（約2分鐘），可以用另一頭的透明油增加亮度，讓唇妝更動人。</p>
+			<h5>Ｑ 為什麼唇紋有點明顯、乾乾的？</h5>
+			<p>不沾杯持久唇彩因為緊貼肌膚，所以當唇彩表面的油亮度下降，修飾唇紋的效果也會降低，建議可以使用透明唇蜜增量光澤。</p>
+			<h5>Ｑ 產品使用有其它要注意的嗎？</h5>
+			<p>不沾杯持久唇彩雖在持久度與不沾黏效果很好，但是對於外力摩擦破壞也是會部分脫妝影響妝容的。產品也應避免長時間接觸熱湯及唾液，會影響產品持久性。</p>
+			<h5>Ｑ 會不會很難卸妝呢？</h5>
+			<p>不沾杯持久唇彩卸妝原理其實和指甲油一樣需要乳化過程，建議使用卸妝乳濕敷久一點(30~40秒)，乳化時間越長卸妝越輕鬆。但卸妝效果也會因為各家廠牌的成分不同，乳化效果也不一樣唷。</p>
+			<h5>Ｑ 我是不是過敏了？</h5>
+			<p>產品在使用前，別忘了先在手上做測試有無過敏反應。如果發現會產生紅紅癢癢的狀態，請立刻停止使用，並與我們聯繫，產品售出7日內無條件退換貨。</p>
+
+
+
+		</div>
+	
+	</div>
+	
+
+	<div class="footer">
+
+		<p><a href="mailto:tsuvimi@gmail.com">Contact Us</a><a href="http://www.pcstore.com.tw/TSUVIMI/">Buy Lipsticks</a></p>
+		<p>TSUVIMI© 2015. <a href="#">PRIVACY POLICY</a></p>
+		<div class="iconall">
+			<a href="https://www.facebook.com/pages/Tsuvimi/774470222615542?sk=timeline"><div class="icon"><img src="footer/facebook.png" height="50" alt=""></div></a>
+			<a href="http://instagram.com/tsuvimi"><div class="icon"><img src="footer/instagram.png" height="50" alt=""></div></a>
+			<a href="https://www.youtube.com/channel/UCE0CYLnGZBffLOQG5d0pw3A"><div class="icon"><img src="footer/youtube.png" height="50" alt=""></div></a>
+		</div>
+	</div>
+
+
+
+
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		
+
+	$(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 200) {
+                $('#menu').fadeIn(800);
+            } else {
+                $('#menu').fadeOut(800);
+            }
+        });
+    });
+
+	})
+         
+   
+</script>
+</body>
+</html>

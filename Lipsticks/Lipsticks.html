@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TSUVIMI Lipsticks</title>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		list-style:none;
+
+	}
+
+
+	
+
+
+
+
+
+
+/*fixed black menu*/
+
+
+	@media (min-width: 768px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 60px;
+		position:relative;
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		height: 60px;
+
+
+		
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	}
+
+	@media (max-width: 767px) {
+	.navblack {
+		background-color: #333;
+		width: 100%;
+		height: 90px;
+		position:relative;
+
+	}
+
+	.menublack {
+		position:absolute;
+		top:0;
+		
+		width: 100%;
+		height: 60px;
+		text-align:center;
+	}
+
+	.menublack  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+		margin-top: 39px;
+		
+	}
+
+	.logo {
+		text-align:center;
+	}
+
+	}
+
+	.menublack a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+	.active {
+		color:#ffb0b0;
+	}
+
+
+
+/*JQ menu*/
+
+	.nav {
+		width: 100%;
+		height:60px;
+		background-color: rgba(50, 50, 50, 0.5);
+		position:relative;
+		position:fixed;
+		top:0px;
+		background-color:rgba(60,60,60,1.0);
+		color: #FFFFFF;
+		z-index:9999;
+
+	}
+
+	
+	@media (min-width:768px) {
+	.menu {
+		position:absolute;
+		top:0;
+		right:0;
+		width: 360px;
+		
+	}
+	}
+
+	.nav .menu  a{
+		text-decoration:none;
+		display:inline-block;
+		color:#fff;
+		font-size: 20px;
+		line-height: 60px;
+		margin-right: 4%;
+		font-family: 'Slabo 27px', serif;
+
+	}
+
+	@media (max-width:767px) {
+		.nav {height: 90px;}
+		.menu {
+			position:absolute;
+			bottom:0;
+			right:0;
+			width: 100%;
+			text-align:center;
+		}
+		.logo {
+			text-align:center;
+		}
+	}
+
+	.menu a:hover {
+		color:#ffb0b0;
+	}
+
+
+
+.a1a2{width: 100%; 
+	height: auto;
+	
+ font-size: 0;}
+.a1{width: 30%; 
+	height: 630px;
+	background-color: #0f0; 
+	display:inline-block;
+	background:url(lipstickspic/warehouse.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	box-sizing: border-box;}
+.a2{width: 70%; height: autopx; display:inline-block; vertical-align:top;}
+
+
+
+/*box*/
+
+.space-3d {
+			width: 80%;
+			height: 600px;
+			margin: auto;
+			position:relative;
+			perspective: 600px;
+			perspective-origin:30% center;
+			transform-style:preserve-3d ;
+			top: 50px;
+		
+			
+		}
+
+		.box {
+			width: 150px;
+			height: 50px;
+			/*outline:2px solid #aaf;*/
+			transform-style:preserve-3d ;
+			transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			transition: all 1s;
+			animation:gogo 2s 0s;
+			margin-bottom: 1px;
+			margin:0 auto;
+		}
+
+		@media (max-width: 767px){
+			.a1 {display:none;}
+			.a2 {width: 100%;}
+		}
+
+		
+	
+		.box div {
+			width: 150px;
+			background-color:rgba(74, 61, 60, 1);
+			box-shadow: inset 0 0 .25em hsla(0,0%,0%,.1), inset 0 0 1.5em hsla(0,0%,0%,.7);
+			position:absolute;
+			top:50px;
+			left:0;
+			font-size: 20px;
+			text-align:center;
+			line-height: 50px;
+			backface-visibility: hidden;
+			font-size: 15px;
+			color:#aaa;
+			font-family: 'Times';
+			border:1px solid #777;
+			border-radius:2px;
+		}
+
+		.box img {
+			margin-top:8px;
+		}
+
+		.front, .back, .left, .right {
+			height: 50px;
+		}
+
+		.top, .bottom {
+			height: 150px;
+ 
+		}
+
+
+		.front {transform: translate3d(0, 0, 75px);}
+		.back {transform:rotateY(180deg) translate3d(0,0,75px);}
+		.top {transform:rotateX(90deg) translate3d(0,0,75px);}
+		.bottom {transform:rotateX(270deg) translate3d(0,0,-25px);}
+		.left {transform:rotateY(270deg) translate3d(0,0,75px);}
+		.right {transform:rotateY(90deg) translate3d(0,0,75px);}
+		
+
+		.box:hover {
+			transform:rotateY(-90deg);
+			transition: all 1s;
+		}
+
+
+		/*.box8 {animation:gogo 1.8s 2.4s;}
+		.box7 {animation:gogo 1.8s 2.6s;}
+		.box6 {animation:gogo 1.8s 2.8s;}
+		.box5 {animation:gogo 1.8s 3.0s;}
+		.box4 {animation:gogo 1.8s 3.2s;}
+		.box3 {animation:gogo 1.8s 3.4s;}
+		.box2 {animation:gogo 1.8s 3.6s;}
+		.box1 {animation:gogo 1.8s 3.8s;}*/
+		
+		.box1 {animation:in 2.4s 0s ;}
+		.box2 {animation:in 2.1s 0s ;}
+		.box3 {animation:in 1.8s 0s ;}
+		.box4 {animation:in 1.5s 0s ;}
+		.box5 {animation:in 1.2s 0s ;}
+		.box6 {animation:in 0.9s 0s ;}
+		.box7 {animation:in 0.6s 0s ;}
+		.box8 {animation:in 0.3s 0s ;}
+
+	
+
+		@keyframes in {
+			0% {transform:rotateY(-360deg) ;}
+			100% {transform:rotateY(540deg);}
+		}
+
+
+
+/*cards*/
+
+	.cards {
+		display:block;
+		width: 100%;
+		height: auto;	
+	
+	/*	bottom:0;*/
+		
+
+
+	}
+
+	.cards {
+		perspective: 6000px;
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		transform-origin:center center;
+		text-align:center;
+
+
+	}
+	
+	body {
+		background-color: #fdd9d6;
+
+	}
+
+
+	.cards div {
+
+		display:inline-block;
+		height: 13vw;
+		width: 13vw;
+		border:3px solid silver;
+		border-radius:15px;
+		position:relative;
+		backface-visibility: hidden;
+		webkit-backface-visibility: hidden;
+		box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+		transform-style: preserve-3d;
+		webkit-transform-style: preserve-3d;
+		transition: all 2s 0s ;
+		-webkit-transition: all 1.5s 0.2s ;
+		
+		margin-top: 1vw;
+		margin-bottom: 0.5vw;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+	}
+
+/*	@media (max-width:767px) {
+		.cards div {height: 33vw;
+					width: 33vw;
+					margin-right: 3vw;}
+	}*/
+
+	
+
+	.cards div:before {
+		content:' ';
+		display:block;
+		width: 100%;
+		height: 100%;
+		border-radius:15px;
+		border:3px solid silver;
+		background-size:150%;
+		position:absolute;
+		left:0;
+		top:0;
+		transform:translate3d(0px,0px,-1px) rotateY(180deg);
+		-webkit-transform:translate3d(0px,0px,-2px) rotateY(180deg);
+		transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		perspective: 2000px;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+		-webkit-background-size: cover;
+		background-size: cover;
+
+	}
+
+	.card1{
+		background: silver url(cardsmallpic/1_topic.jpg) center center no-repeat;
+		animation:gogo 1.6s 0s cubic-bezier(.27,.77,.36,.86);
+		
+	}
+
+	.card1:before {
+		background: silver url(cardsmallpic/1_ChihHanYang1.jpg) center center no-repeat;
+
+		
+	}
+
+	.card2{
+		background: silver url(cardsmallpic/2_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.2s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card2:before {
+		background: silver url(cardsmallpic/2_ChengYun.jpg) top center no-repeat;
+		
+	}
+
+	.card3{
+		background: silver url(cardsmallpic/3_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.4s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card3:before {
+		background: silver url(cardsmallpic/3_Ashley.jpg) top center no-repeat;
+		
+	}
+	
+	.card4{
+		background: silver url(cardsmallpic/4_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.6s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card4:before {
+		background: silver url(cardsmallpic/4_Sonia.jpg) top center no-repeat;
+		
+	}
+
+	.card5{
+		background: silver url(cardsmallpic/5_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.1s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card5:before {
+		background: silver url(cardsmallpic/5_奇萱.jpg) top center no-repeat;
+	}
+
+	.card6 {
+		background: silver url(cardsmallpic/6_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.3s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card6:before {
+		background: silver url(cardsmallpic/6_王麂皮.jpg) top center no-repeat;
+	}
+
+	.card7{
+		background: silver url(cardsmallpic/7_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.5s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card7:before {
+		background: silver url(cardsmallpic/7_Aveil.jpg) top center no-repeat;
+	}
+
+	.card8{
+		background: silver url(cardsmallpic/8_topic.jpg) top center no-repeat;
+		animation:gogo 1.6s 0.7s cubic-bezier(.27,.77,.36,.86);
+	}
+
+	.card8:before {
+		background: silver url(cardsmallpic/8_ChengYun.jpg) top center no-repeat;
+	}
+	.cards div:hover {
+		transform: rotateY(180deg);
+	}
+
+	@keyframes gogo {
+		0%{transform:rotateY(-270deg);}
+		100%{transform:rotateY(360deg);}
+	}
+
+	
+
+
+	.c {
+		display:inline-block;
+		width: 14vw;
+		margin: 5px 10px;
+		margin-bottom: 20px;
+	}
+
+
+
+	.c a p {
+		font-size: 15px;
+		text-decoration:none;
+		background-color: #edd;
+		padding:5px;
+		color:#333;
+	}
+
+	.c a p:first-child {
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+		font-family: '微軟正黑體';
+	}
+
+	.c a p:last-child {
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
+	}
+	
+	.c a p:first-child {
+		padding-bottom:0;
+	}
+
+	.c a {
+		text-decoration:none;
+	}
+	
+	@media (max-width: 767px) {
+		.c {
+			height: auto;
+			width: 45%;
+			text-align:center;
+		
+		}
+		.c div {
+			height: 160px;
+			width: 160px;
+			margin-right: 0;
+		}
+		.c a p:first-child {
+			display:none;
+		}
+
+		.c a p {
+			background-color: rgba(256,256,256, 0.0);
+			color:#333;
+		}
+
+		.a2 {
+			height: auto;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.c a p:first-child {
+			display:none;
+		}
+
+		.c {
+			width: 16vw;
+		}
+
+		.c a p {
+			background-color: rgba(256,256,256, 0.0);
+			color:#333;
+		}
+	}
+
+	@media (min-width: 1050px) {
+		.c {
+		display:inline-block;
+		width: 14vw;
+		margin: 5px 10px;
+		margin-bottom: 20px;
+	}
+
+
+
+	.c a p {
+		font-size: 15px;
+		text-decoration:none;
+		background-color: #edd;
+		padding:5px;
+		color:#333;
+		display:block;
+	}
+
+	.c a p:first-child {
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+		font-family: '微軟正黑體';
+		display:block;
+	}
+
+	.c a p:last-child {
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
+	}
+	
+	.c a p:first-child {
+		padding-bottom:0;
+	}
+
+	.c a {
+		text-decoration:none;
+	}
+	}
+
+
+	body {
+		background-color: #f8c7ce; 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*footer*/
+
+	.footer {
+		width: 100%;
+		height: auto;
+		background-color: #333;
+		padding: 15px 30px;
+		color:#ddd;
+		text-align:center;
+		box-sizing:border-box;
+		position:relative;
+		margin-top: -5px;
+	}
+
+	.footer a {
+		text-decoration:none;
+		color:#ddd;
+		margin-right: 15px;
+		line-height: 30px;
+		box-sizing:border-box;
+	}
+
+	.footer>p:first-child>a:first-child {
+		color:#dd0;
+	}
+
+	.footer>p:first-child>a:nth-child(2) {
+		color:#f6cada;
+	}
+	
+	.footer>p:first-child>a:hover {
+		color:#be0d0d;
+	}
+
+
+	.footer>p>a:hover {
+		color:#f69274;
+	}
+	
+	.iconall {
+		position:absolute;
+		right:25px;
+		bottom:3px;
+
+		height: 50px;
+		bottom:15px;
+
+	
+		
+
+	}
+
+	.icon {
+		display:inline-block;
+	
+		
+
+	}
+
+
+	@media (max-width: 767px) {
+		.iconall {display:none;}
+		.footer {font-size: 15px;}
+		.footer a {line-height: 20px;}
+	}
+
+
+	.icon:hover {
+		animation:icon 1s  infinite ;
+	}
+
+	@keyframes icon{
+		0% {transform: scale(1,1); top:0;}
+		40% {transform: scale(0.7,1); top:0;}
+		80% {transform: scale(1,0.8); top:0;}
+		100% {transform: scale(1,1); top:0;}
+	}
+	
+
+
+</style>
+
+</head>
+
+
+<body>
+	<div class="navblack">
+		<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+		<div class="menublack">
+				<a href="../home/index.html" class="current">Home</a>
+				<a href="../About/about.html">About</a>
+				<a href="Lipsticks.html">Lipsticks</a>
+				<a href="../album/album.html">Album</a>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="nav" id="menu">
+			<div class="logo"><img src="navpic/logo.png" height="54" alt=""></div>
+			<div class="menu">
+					<a href="../home/index.html" class="current">Home</a>
+					<a href="../About/about.html">About</a>
+					<a href="Lipsticks.html">Lipsticks</a>
+					<a href="../album/album.html">Album</a>
+			</div>
+
+		</div>
+
+<div class="a1a2">
+	<div class="a1">
+		<div class="space-3d">
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197005.htm">
+			<div class="box box1">
+				<div class="front">
+					<img src="menupic/b01.png" height="36" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#01 Natural Babe</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197561.htm">
+			<div class="box box2">
+				<div class="front">
+					<img src="menupic/b02.png" height="36" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#02 Tender Love</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M12197611.htm">
+			<div class="box box3">
+				<div class="front">
+					<img src="menupic/b03.png" height="34" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#03 Coral Sweetie</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15309977.htm">
+			<div class="box box4">
+				<div class="front">
+					<img src="menupic/b04.png" height="32" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#04 Romatic Silk</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15318342.htm">
+			<div class="box box5">
+				<div class="front">
+					<img src="menupic/b05.png" height="32" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#05 Firty Pink</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M15318495.htm">
+			<div class="box box6">
+				<div class="front">
+					<img src="menupic/b06.png" height="32" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#06 Orange POP</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M17663851.htm">
+			<div class="box box7">
+				<div class="front">
+					<img src="menupic/b07.png" height="32" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#07 Jungle Peach</div>
+			</a>
+		</div>
+		<a href="http://www.pcstore.com.tw/tsuvimi/M17664514.htm">
+			<div class="box box8">
+				<div class="front">
+					<img src="menupic/b08.png" height="32" alt="">
+				</div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right">#08 Midnight Date</div>
+			</a>
+		</div>
+
+	</div>
+	</div>
+	<div class="a2">
+		<div class="cards">
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197005.htm"><div class="card1"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197005.htm"><p>3in1不沾杯持久唇彩</p><p>#01 Natural Babe</p></a>
+		</li>
+		
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197561.htm"><div class="card2"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197561.htm"><p>3in1不沾杯持久唇彩</p><p>#02 Tender Love</p></a>
+		</li>
+		
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197611.htm"><div class="card3"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M12197611.htm"><p>3in1不沾杯持久唇彩</p><p>#03 Coral Sweetie</p></a>
+		</li>
+
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15309977.htm"><div class="card4"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15309977.htm"><p>3in1不沾杯持久唇彩</p><p>#04 Romatic Silk</p></a>
+		</li>
+
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15318342.htm"><div class="card5"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15318342.htm"><p>3in1不沾杯持久唇彩</p><p>#05 Flirty Pink</p></a>
+		</li>
+
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15318495.htm"><div class="card6"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M15318495.htm"><p>3in1不沾杯持久唇彩</p><p>#06 Orange POP</p></a>
+		</li>
+
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M17663851.htm"><div class="card7"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M17663851.htm"><p>3in1不沾杯持久唇彩</p><p>#07 Jungle Peach</p></a>
+		</li>
+
+		<li class="c">
+			<a href="http://www.pcstore.com.tw/tsuvimi/M17664514.htm"><div class="card8"></div></a>
+			<a href="http://www.pcstore.com.tw/tsuvimi/M17664514.htm"><p>3in1不沾杯持久唇彩</p><p>#08 Midnight Date</p></a>
+		</li>
+		
+	</div>
+	</div>
+</div>
+	
+<div class="footer">
+
+		<p><a href="mailto:tsuvimi@gmail.com">Contact Us</a><a href="http://www.pcstore.com.tw/TSUVIMI/">Buy Lipsticks</a></p>
+		<p>TSUVIMI© 2015. <a href="#">PRIVACY POLICY</a></p>
+		<div class="iconall">
+			<a href="https://www.facebook.com/pages/Tsuvimi/774470222615542?sk=timeline"><div class="icon"><img src="footer/facebook.png" height="50" alt=""></div></a>
+			<a href="http://instagram.com/tsuvimi"><div class="icon"><img src="footer/instagram.png" height="50" alt=""></div></a>
+			<a href="https://www.youtube.com/channel/UCE0CYLnGZBffLOQG5d0pw3A"><div class="icon"><img src="footer/youtube.png" height="50" alt=""></div></a>
+		</div>
+	</div>
+
+</div>
+
+
+
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		
+
+	$(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 350) {
+                $('#menu').fadeIn(800);
+            } else {
+                $('#menu').fadeOut(800);
+            }
+        });
+    });
+
+	})
+         
+   
+</script>
+</body>
+</html>
